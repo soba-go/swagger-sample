@@ -1,0 +1,44 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "API Support",
+            "url": "http://www.swagger.io/support",
+            "email": "support@swagger.io"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "paths": {
+        "/ping": {
+            "get": {
+                "description": "ping a server",
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Pings a Server",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/controller.PingPongResult"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "controller.PingPongResult": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

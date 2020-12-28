@@ -1,0 +1,28 @@
+definitions:
+  controller.PingPongResult:
+    properties:
+      message:
+        type: string
+    type: object
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+paths:
+  /ping:
+    get:
+      description: ping a server
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.PingPongResult'
+      summary: Pings a Server
+swagger: "2.0"
